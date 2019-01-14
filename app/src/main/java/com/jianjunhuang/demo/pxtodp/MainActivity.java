@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
     leftLayout = findViewById(R.id.left);
     rightLayout = findViewById(R.id.right);
+
+    TextView tvDpi = findViewById(R.id.tv_dpi);
+    tvDpi.setText(String.format("DPI: %f", getScreenDensity()));
 
     Button convertBtn = findViewById(R.id.btn_convert);
     convertBtn.setOnClickListener(view -> {
